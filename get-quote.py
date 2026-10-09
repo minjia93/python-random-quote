@@ -1,11 +1,12 @@
+import os
+import random
+
 def main():
-  # print("Keep it logically awesome.")
+  f = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "quotes.txt"), encoding="utf-8")
+  quotes = f.read().splitlines()
+  f.close()
 
-  #f = open("quotes.txt")
-  #quotes = f.readlines()
-  #f.close()
-
-  #print(quotes)
+  print(random.choice(quotes))
 
 if __name__== "__main__":
   main()
